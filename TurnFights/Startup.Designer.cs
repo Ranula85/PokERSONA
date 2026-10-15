@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             textBox1 = new TextBox();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -42,7 +41,6 @@
             label1.Size = new Size(1205, 110);
             label1.TabIndex = 1;
             label1.Text = "Insert text";
-            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -54,19 +52,7 @@
             textBox1.TabIndex = 2;
             textBox1.Text = "Type your name...";
             textBox1.Visible = false;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // button1
-            // 
-            button1.Enabled = false;
-            button1.Location = new Point(60, 195);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 3;
-            button1.Text = "Confirm";
-            button1.UseVisualStyleBackColor = true;
-            button1.Visible = false;
-            button1.Click += button1_Click;
+            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // Startup
             // 
@@ -74,7 +60,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(1281, 515);
-            Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -88,6 +73,5 @@
         #endregion
         private Label label1;
         private TextBox textBox1;
-        private Button button1;
     }
 }
